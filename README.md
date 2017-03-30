@@ -1,4 +1,4 @@
-![logo](https://wayofthefuture.github.io/react-cross-platform/web/img/logo-500.png)
+<img src="https://wayofthefuture.github.io/react-cross-platform/web/img/logo-500.png" alt="Logo"/>
 
 ### Write code for React Web and React Native using one simple framework. Maximizes code re-use, readability, and wraps necessary functions into promises.
 
