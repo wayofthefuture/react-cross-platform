@@ -1,5 +1,6 @@
-#This project is under construction (03/2017)
+###Write code for React Web and React Native using one simple framework. Maximizes code re-use, readability, and wraps necessary functions into promises.
 
-#Please contribute!
+##This project is under construction (03/2017)
+##Please contribute!
 
-#https://wayofthefuture.github.io/react-cross-platform
+##https://wayofthefuture.github.io/react-cross-platform

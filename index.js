@@ -28,6 +28,5 @@ export {
     AppState
 };
 
-//debug
-require('./parallel/temp');
+//console debug
 //window.storage = storage;
