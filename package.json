@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "name": "react-cross-platform",
+  "author": "wayofthefuture",
+  "license": "GPL-3.0",
+  "homepage": "https://wayofthefuture.github.io/react-cross-platform",
+  "description": "Write code for React Web and React Native using one simple framework. Maximizes code re-use, readability, and wraps necessary functions into promises.",
+  "keywords": [
+    "react",
+    "reactjs",
+    "react native",
+    "react-native",
+    "react web",
+    "react-web",
+    "react cross platform",
+    "react-cross-platform",
+    "react navigator",
+    "react fetch"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wayofthefuture/react-cross-platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wayofthefuture/react-cross-platform/issues"
+  },
+  "scripts": {
+    "install-global": "npm i -g release-it"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "lodash": "^4.15.0"
+  },
+  "peerDependencies": {
+    "react-native": "^0.33.0",
+    "react-router": "^2.8.1"
+  },
+  "main": "index.js"
+}

@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+
+body {
+	margin: 0;
+	background: #ccc;
+	color: #333;
+    font-family: Roboto;
+    font-size: 20px;
+    -webkit-text-size-adjust: 100%;
+}
+
+#content-body {
+	width: 800px;
+	margin: 20px auto;
+    text-align: center;
+}
+
+header, footer {
+    font-family: 'Droid Sans';
+    background: #222;
+	color: #aaa;
+}
+nav {
+	width: 800px;
+	margin: 0 auto;
+    padding: 7px 0;
+}
+header nav { text-align: right; }
+footer nav { text-align: center; }
+
+section {
+    margin: 30px 0;
+}
+
+/* ============================================================ */
+
+div, button {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+div {
+    text-align: left;
+}
+button {
+    font-family: 'Droid Sans';
+    font-size: 20px;
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 5px;
+	font-family: 'Droid Sans';
+    font-weight: normal;
+}
+h1 { font-size: 50px; }
+h2 { font-size: 36px; }
+h3 { font-size: 26px; }
+h4 { font-size: 22px; }
+h5 { font-size: 16px; }
+
+button {
+    color: #aaa;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}
+button:hover {
+    color: #ccc;
+    transition: 300ms;
+}
+
+/* ============================================================ */
+
+.install {
+    font-size: 20px;
+}
+.code-header {
+    position: relative;
+	padding: 5px;
+	color: #333;
+    font-family: 'Droid Sans';
+    font-size: 24px;
+    margin-top: 40px;
+}
+.copy {
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+code {
+    font-size: 16px;
+}
+.cli-usage {
+	padding: 0 20px;
+	background: #222;
+    color: #aaa;
+	font-size: 14px;
+}

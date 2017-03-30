@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React Cross Platform</title>
+    <meta name="description" content="Write code for React Web and React Native using one simple framework. Maximizes code re-use, readability, and wraps necessary functions into promises.">
+    <link href="web/css/style.css" rel="stylesheet">
+    <link href="web/css/prism.css" rel="stylesheet">
+    <script src="web/lib/prism.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button onclick="window.location='https://www.npmjs.com/package/react-cross-platform';">NPM</button>
+            <button onclick="window.location='https://github.com/wayofthefuture/react-cross-platform/fork';">FORK</button>
+            <button onclick="window.location='https://github.com/wayofthefuture/react-cross-platform';">GITHUB</button>
+        </nav>
+    </header>
+
+    <section id="content-body">
+        <img src="web/img/logo.png" width="400">
+        <div style="max-width:600px;text-align:center;margin:0 auto;">
+            <h4>Write code for React Web and React Native using one simple framework. Maximizes code re-use, readability, and wraps necessary functions into promises.</h4>
+            <br>
+            <h4>Note: this repository is currently in BETA. Please contribute!</h4>
+        </div>
+
+<div class="code-header">
+    Install:
+</div>
+<pre><code id="install" class="install language-javascript">npm install react-cross-platform --save</code></pre>
+
+
+<div class="code-header">
+    Usage:
+</div>
+<pre><code id="fetch" class="language-javascript">import {notify, storage, fetch, etc...} from 'react-cross-platform';
+//or
+import * as rcp from 'react-cross-platform'</code></pre>
+
+
+
+<div class="code-header">
+    fetch : create web request
+</div>
+<pre><code id="fetch" class="language-javascript">//takes ajax options object or native fetch options object
+//use detect.web/native to determine which options to send
+fetch(url, options)
+    .then(data => { console.log(data) })
+    .catch(err => { console.log(err.message) });</code></pre>
+
+
+
+
+<div class="code-header">
+    notify : alert the user with a popup notification
+</div>
+<pre><code id="fetch" class="language-javascript">notify('Hello World!', () => console.log('done'));
+WRAP THIS IN PROMISE
+</code></pre>
+
+
+<div class="code-header">
+    navigate : render a page component
+</div>
+<pre><code id="fetch" class="language-javascript">//navigate to specified route
+navigate('home', this.props);
+</code></pre>
+
+
+
+
+<div class="code-header">
+    storage : persistent key value/object store
+</div>
+<pre><code id="fetch" class="language-javascript">//get item
+storage.set('prices', {gumbo: 9.99, boudin: 4.99}).then(() => {
+    console.log('prices saved');
+});
+storage.get('prices').then(product => {
+    notify(`Boudin for ${product.boudin}!`);
+});
+storage.remove('prices').then(() => {
+    console.log('no more boudin');
+});</code></pre>
+
+
+
+
+<div class="code-header">
+    userstore : persistent user store interface with expire promise
+</div>
+<pre><code id="fetch" class="language-javascript">//user store becomes an interface when created, no subsequent property names
+//are allowed. this is intended by design, values can be updated.
+
+//create userstore
+userstore.create(user)
+    .then(() => notify('user has been saved'))
+    .catch(err => console.log(err.message));
+
+//get entire userstore object
+userstore.get()
+    .then(user => notify(`Hello ${user.name}!`))
+    .expire(() => navigate('login', this.props));
+
+//get user property
+userstore.get('pets')
+    .then(pets => notify(`You have ${pets.length} total pets!`))
+    .expire(() => navigate('login', this.props));
+
+//update user properties (value or object)
+userstore.update('pets', ['dog', 'cat', 'bird'])
+    .then(() => console.log('item saved'))
+    .expire(() => navigate('login', this.props));
+
+//clear userstore
+userstore.clear()
+    .then(() => navigate('login', this.props))
+    .catch(err => console.log(err.message));
+</code></pre>
+
+        <div class="code-header">
+            Modules and Status:<br>
+            - appstate: done<br>
+            - confirm: done<br>
+            - confirmYesNo: done<br>
+            - detect: done<br>
+            - fcm: done<br>
+            - fetch: done<br>
+            - googleSignIn: done<br>
+            - linking: done<br>
+            - navigate: done<br>
+            - nativeModules: done<br>
+            - notify: in progress<br>
+            - platform: done<br>
+            - storage: done<br>
+            - userstore: in progress<br>
+        </div>
+
+    </section>
+    <br><br>
+
+    <footer>
+        <nav>
+            <br>React Cross Platform<br><br><img src="web/img/react-logo.png" width="50"><br><br>
+            <img src="http://hitwebcounter.com/counter/counter.php?page=6431640&style=0038&nbdigits=7&type=page" border="0"><br>
+        </nav>
+    </footer>
+</body>
+</html>
