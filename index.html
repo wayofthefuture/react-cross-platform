@@ -86,41 +86,6 @@ storage.remove('prices').then(() => {
     console.log('no more boudin');
 });</code></pre>
 
-
-
-
-<div class="code-header">
-    userstore : persistent user store interface with expire promise
-</div>
-<pre><code id="fetch" class="language-javascript">//user store becomes an interface when created, no subsequent property names
-//are allowed. this is intended by design, values can be updated.
-
-//create userstore
-userstore.create(user)
-    .then(() => notify('user has been saved'))
-    .catch(err => console.log(err.message));
-
-//get entire userstore object
-userstore.get()
-    .then(user => notify(`Hello ${user.name}!`))
-    .expire(() => navigate('login', this.props));
-
-//get user property
-userstore.get('pets')
-    .then(pets => notify(`You have ${pets.length} total pets!`))
-    .expire(() => navigate('login', this.props));
-
-//update user properties (value or object)
-userstore.update('pets', ['dog', 'cat', 'bird'])
-    .then(() => console.log('item saved'))
-    .expire(() => navigate('login', this.props));
-
-//clear userstore
-userstore.clear()
-    .then(() => navigate('login', this.props))
-    .catch(err => console.log(err.message));
-</code></pre>
-
         <div class="code-header">
             Modules and Status:<br>
             - appstate: done<br>
@@ -133,10 +98,9 @@ userstore.clear()
             - linking: done<br>
             - navigate: done<br>
             - nativeModules: done<br>
-            - notify: in progress<br>
+            - notify: in progress - promisify<br>
             - platform: done<br>
             - storage: done<br>
-            - userstore: in progress<br>
         </div>
 
     </section>
